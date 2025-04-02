@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('beaches')">Beaches</button>
+        <button onclick="filterImages('cities')">Cities</button>
+        <button onclick="filterImages('deserts')">Deserts</button>
+        <button onclick="filterImages('flowers')">Flowers</button>
+        <button onclick="filterImages('forests')">Forests</button>
+        <button onclick="filterImages('mountains')">Mountains</button>
+        <button onclick="filterImages('oceans')">Oceans</button>
+        <button onclick="filterImages('sunset')">Sunset</button>
+        <button onclick="filterImages('waterfalls')">Waterfalls</button>
+        <button onclick="filterImages('wildlife')">Wildlife</button>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery" id="gallery"></div>
+
+    <!-- Lightbox (Fullscreen Image Viewer) -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="prev" onclick="prevImage()">&#10094;</span>
+        <img id="lightbox-image">
+        <span class="next" onclick="nextImage()">&#10095;</span>
+        <button id="playPause" onclick="toggleSlideshow()">▶️</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
